@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Cadastro de Itens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/app/static/css/estoque_add.css">
+    <link rel="shortcut icon" href="/app/static/images/logo/icone_transparente.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="estoque_show.html">Visualizar Estoque</a>
+        <a href="imc.html">Calculadora de IMC</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container">
+        <h1><i class="fas fa-shopping-cart"></i> CADASTRAR ITEM</h1>
+        <form>
+            <label for="nome">NOME:</label>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="categoria">CATEGORIA:</label>
+            <input type="text" id="categoria" name="categoria">
+            
+            <label for="quantidade">QUANTIDADE:</label>
+            <input type="text" id="quantidade" name="quantidade">
+            
+            <label for="data-validade">DATA DE VALIDADE:</label>
+            <input type="text" id="data-validade" name="data-validade">
+
+            <button type="submit" class="add-button">Adicionar</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

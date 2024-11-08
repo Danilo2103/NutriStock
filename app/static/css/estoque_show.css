@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png');
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px dashed #000;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    font-size: 14px;
+    font-weight: normal;
+}
+th:first-child {
+    width: 10%; /* Set the width of the 'quantidade' column to be the smallest */
+}
+td {
+    height: 50px; /* Increase the height of table rows */
+}
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.nav a:hover {
+    color: #f1f1f1;
+}
+.nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
