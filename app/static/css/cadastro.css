@@ -1,0 +1,65 @@
+body {
+    background-color: #f5f5dc; /* Light beige color */
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png');
+}
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.container img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+.container .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.container .input-group i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.container button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.container button:hover {
+    text-decoration: underline;
+}
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.login-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,157 @@
+<html>
+ <head>
+  <title>
+   Calculadora de IMC
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: beige;
+            background-image: url('https://placehold.co/300x500?text=Background+Texture');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .header {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .header h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            margin: 0;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+        .menu-icon, .settings-icon {
+            position: absolute;
+            top: 10px;
+            font-size: 48px; /* Increased size */
+            cursor: pointer;
+        }
+        .menu-icon {
+            left: 10px;
+        }
+        .settings-icon {
+            right: 10px;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .input-container img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu a:last-child {
+            border-bottom: none;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            .header img {
+                width: 40px;
+                height: 40px;
+            }
+            .input-container img {
+                width: 25px;
+                height: 25px;
+            }
+            .input-container input {
+                padding: 8px;
+            }
+        }
+  </style>
+  <script>
+   function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function goToSettings() {
+            window.location.href = '#settings'; // Replace with the actual settings page URL or logic
+        }
+  </script>
+ </head>
+ <body>
+  <i class="fas fa-bars menu-icon" onclick="toggleMenu()">
+  </i>
+  <i class="fas fa-cogs settings-icon" onclick="goToSettings()">
+  </i>
+  <div class="container">
+   <div class="header">
+    <h1>
+     Calculadora de IMC
+    </h1>
+    <img alt="Box Icon" height="50" src="https://storage.googleapis.com/a1aa/image/geodIkeLf4MtgJHwE6wB625w6VfWer76HCJYEAQ3fMjGucv7E.jpg" width="50"/>
+   </div>
+   <div class="menu" id="menu">
+    <a href="#home">
+     Home
+    </a>
+    <a href="#about">
+     About
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+   </div>
+   <div class="input-container">
+    <img alt="Ruler Icon" height="30" src="https://storage.googleapis.com/a1aa/image/wfPUsuTAcfkS20Y7P9Hr9eMUwVhbeFfTdnLeLvleifVm209uTA.jpg" width="30"/>
+    <input placeholder="Altura em metros" type="text"/>
+   </div>
+   <div class="input-container">
+    <img alt="Dumbbell Icon" height="30" src="https://storage.googleapis.com/a1aa/image/26xlWO7dbF41EdvTCZ44W3cjXxH3hzrjaJdFSpHRql2tcv7E.jpg" width="30"/>
+    <input placeholder="Peso em quilos" type="text"/>
+   </div>
+  </div>
+ </body>
+</html>
