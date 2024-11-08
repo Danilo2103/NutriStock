@@ -1,7 +1,7 @@
 # 🥗 NutriStock - Sistema de Gestão de Estoque Nutricional
 
 <p align="center">
-  <img src="app/static/images/logo.png" alt="NutriStock Logo" width="200"/>
+  <img src="app/static/images/logo_transparente.png" alt="NutriStock Logo" width="200"/>
 </p>
 
 ## 📑 Índice
