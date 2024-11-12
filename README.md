@@ -1,48 +1,75 @@
-# 🚀 Configuração do Projeto
+# 🥗 NutriStock - Sistema de Gestão de Estoque Nutricional
 
-## 📚 Explicações
-Este projeto foi criado com o objetivo de compartilhar conhecimentos sobre Flask. Ele inclui a criação de uma página de login e cadastro de usuários, uma API para manipulação de dados, e utiliza SQLite para armazenar os dados dos usuários. Para estilização, foi usado o framework TailwindCSS.
+<p align="center">
+  <img src="/static/images/logo/logo_transparente.png" alt="NutriStock Logo" width="200"/>
+</p>
 
-Além disso, o projeto explora conceitos de arquitetura de software, como MVC e Blueprints. Para demonstrar a diferença entre eles, foram criadas três branches paralelas:
+## 📑 Índice
+- [Sobre](#-sobre)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias](#-tecnologias)
+- [Requisitos](#-requisitos)
+- [Instalação](#-instalação)
+- [Download do Projeto](#-download-do-projeto)
+- [Configuração do Banco de Dados](#️-configuração-do-banco-de-dados)
+- [Execução da API e do Frontend](#-execução-da-api-e-do-frontend)
+- [Contribuição](#-contribuição)
+- [FAQ](#-faq)
+- [Licença](#-licença)
+- [Contato](#-contato)
 
-- [Blueprint](https://github.com/GetulioLT/Sistema-Login/tree/blueprints)
-- [MVC](https://github.com/GetulioLT/Sistema-Login/tree/mvc)
-- [MVC-Blueprint](https://github.com/GetulioLT/Sistema-Login/tree/mvc-blueprints)
+## 📋 Sobre
 
-Cada branch tem o objetivo de mostrar uma abordagem diferente de arquitetura e organização de código.
+NutriStock é um sistema de gestão de estoque desenvolvido especificamente para profissionais da área de nutrição. O sistema permite o controle eficiente de produtos alimentícios, monitoramento de validade, gestão de inventário e geração de relatórios detalhados.
 
-O guia a seguir irá ajudá-lo a configurar e testar o projeto em sua máquina.
+## ⭐ Funcionalidades
 
-## 🛠️ Pré-requisitos
+### Principais
+- Cadastro e gestão de produtos
+- Controle de estoque
+- Monitoramento de validade
+- Gestão de fornecedores
+- Relatórios personalizados
+- Dashboard interativo
+
+### Recursos Adicionais
+- Sistema de alertas
+- Backup automático
+- Controle de acesso por níveis
+- Histórico de movimentações
+- Exportação de dados
+
+## 🛠 Tecnologias
+
+- Python
+- Flask
+- SQLite/SQLAlchemy
+- HTML5/CSS3
+- JavaScript
+- Bootstrap 5
+- TailwindCSS
+
+## 💻 Requisitos
+
 Certifique-se de ter o Python, pip e o git instalados em seu sistema.
 
-## 📥 Download do Projeto
-Primeiro, com o git instalado, você pode clonar o projeto com o seguinte comando:
+## 📦 Instalação
 
-```bash
-git clone https://github.com/GetulioLT/Sistema-Login.git
-```
-
-## 🌐 Criação e Ativação do Ambiente Virtual
-1. Com o projeto clonado, abra o terminal e navegue até a pasta do projeto. Em seguida, crie um ambiente virtual com o seguinte comando (substitua "version" pela versão do Python que você está utilizando):
-
-```bash
-python -version -m venv venv
-```
-2. Ative o ambiente virtual:
-
-```bash
-venv/bin/activate
-```
-
-## 📦 Instalação das Dependências
-Com o ambiente virtual ativado, instale as dependências do projeto:
+### Dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🗄️ Configuração do Banco de Dados
+## 📥 Download do Projeto
+
+Primeiro, com o git instalado, você pode clonar o projeto com o seguinte comando:
+
+```bash
+git clone https://github.com/Danilo2103/NutriStock.git
+```
+
+## 🗒️ Configuração do Banco de Dados
 Navegue até a pasta api e execute os seguintes comandos:
 
 ```bash
@@ -65,27 +92,32 @@ python app.py
 python app.py
 ```
 
-## 🌐 Acesso ao Sistema e à API
+## 👥 Contribuição
 
-Com a API e o Frontend em execução, você pode acessar:
+### Fork o projeto
 
-- O sistema de login e cadastro através do seguinte endereço:
+Crie sua Feature Branch (git checkout -b feature/AmazingFeature)
+Commit suas mudanças (git commit -m 'Add some AmazingFeature')
+Push para a Branch (git push origin feature/AmazingFeature)
+Abra um Pull Request
+Diretrizes de Contribuição
+Siga o estilo de código PEP 8
+Adicione testes para novas funcionalidades
+Atualize a documentação conforme necessário
+Mantenha o código limpo e bem documentado
 
-```bash
-http://localhost:5000
-```
+## ❓ FAQ
+P: Como redefinir minha senha? R: Acesse a página de login e clique em "Esqueci minha senha".
 
-- A API através do seguinte endereço:
-
-```bash
-http://localhost:5001
-```
+P: O sistema funciona offline? R: Não, é necessário conexão com internet.
 
 ## 📜 Licença
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE.md) para obter detalhes.
+Este projeto está licenciado sob a Licença da Uninassau - consulte o arquivo [LICENSE](LICENSE.md) para obter detalhes.
 
-## 👨‍💻 Autor
-Feito por Getulio Vagner Miranda Santos. 
-- GitHub: [GetulioLT](https://github.com/GetulioLT)
-- LinkedIn: [Getulio Vagner](https://www.linkedin.com/in/getulio-vagner-117341186/)
+## 📞 Contato
+NutriStock - @twitter.com/@nutristock - contact@nutristock.com
 
+## 👨‍💻 Repositório
+- GitHub: [NutriStock](https://github.com/Danilo2103/NutriStock)
+
+# Desenvolvido com ❤️ por Equipe do NutriStock <p><img src="/static/images/logo/logo_transparente.png" alt="NutriStock Logo" width="50"/></p>
