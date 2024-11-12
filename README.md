@@ -120,4 +120,4 @@ NutriStock - @twitter.com/@nutristock - contact@nutristock.com
 ## 👨‍💻 Repositório
 - GitHub: [NutriStock](https://github.com/Danilo2103/NutriStock)
 
-# Desenvolvido com ❤️ por Equipe do NutriStock <span><img src="/static/images/logo/logo_transparente.png" alt="NutriStock Logo" width="50"/></span>
+# Desenvolvido com ❤️ por Equipe do NutriStock <span><img src="/static/images/logo/logo_transparente.png" alt="NutriStock Logo" width="30"/></span>
