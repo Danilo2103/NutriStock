@@ -1,0 +1,92 @@
+<!-- Estende o template.html -->
+{% extends "template.html" %}
+
+<!-- Define o título da página -->
+{% block title %}
+Calculadora de IMC
+{% endblock %}
+
+<!-- Define o corpo da página -->
+{% block body %}
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/imc.css">
+    <link rel="shortcut icon" href="/app/static/images/logo/icone_transparente.ico" type="image/x-icon">
+    <style>
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function goToSettings() {
+            window.location.href = '#settings'; // Substitua pela URL ou lógica real da página de configurações
+        }
+
+        function calcularIMC() {
+            // Captura os valores de altura e peso
+            var altura = parseFloat(document.querySelectorAll('.input-container input')[0].value);
+            var peso = parseFloat(document.querySelectorAll('.input-container input')[1].value);
+
+            // Verifica se os valores são válidos
+            if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
+                alert("Por favor, insira valores válidos para altura e peso.");
+                return;
+            }
+
+            // Calcula o IMC
+            var imc = peso / (altura * altura);
+            var classificacao;
+
+            // Classifica o IMC
+            if (imc < 18.5) {
+                classificacao = "Abaixo do peso";
+            } else if (imc >= 18.5 && imc < 24.9) {
+                classificacao = "Peso normal";
+            } else if (imc >= 25 && imc < 29.9) {
+                classificacao = "Sobrepeso";
+            } else {
+                classificacao = "Obesidade";
+            }
+
+            // Exibe o resultado
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = `Seu IMC é: ${imc.toFixed(2)}<br>Classificação: ${classificacao}`;
+        }
+    </script>
+</head>
+<body>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <i class="fas fa-cogs settings-icon" onclick="goToSettings()"></i>
+    <div class="container">
+        <div class="header">
+            <h1>Calculadora de IMC</h1>
+            <img alt="Icone de Halteres" src="/static/images/assets/dumbell.png"/>
+        </div>
+        <div class="menu" id="menu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('estoque_add') }}">Adicionar Itens</a>
+            <a href="{{ url_for('estoque_show') }}">Visualizar Estoque</a>
+        </div>
+        <div class="input-container">
+            <img alt="Icone de Régua" src="/static/images/assets/ruler.png"/>
+            <input placeholder="Altura em metros" type="text" required/>
+        </div>
+        <div class="input-container">
+            <img alt="Icone de Balança" src="/static/images/assets/balanca.png"/>
+            <input placeholder="Peso em quilos" type="text" required/>
+        </div>
+        <button type="button" class="calculate-button" onclick="calcularIMC()">Calcular IMC</button>
+        <div id="resultado"></div> <!-- Div para exibir o resultado -->
+    </div>
+</body>
+{% endblock %}

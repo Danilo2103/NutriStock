@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block body %}
+<div class="row align-items-center gx-5">
+    <div class="col-md-6 order-md-2">
+        <h2>Faça login para continuar</h2>
+        <form action="/login-in" method="post">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email"
+                    required>
+                <label for="email" class="form-label">Digite o seu email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha"
+                    required>
+                <label for="password" class="form-label">Digite sua senha</label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Entrar">
+        </form>
+        <div class="forgot-password-container">
+            <a href="{{ url_for('pass_recover') }}" class="forgot-password">Esqueci minha senha</a>
+        </div>
+    </div>
+    <div class="col-md-6 order-md-1">
+        <img src="/static/images/assets/undraw_sign_in_re_o58h.svg" alt="Entrar no sistema" class="img-fluid">
+        <div id="link-container">
+            <a href="/cadastro">Ainda não tenho cadastro</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

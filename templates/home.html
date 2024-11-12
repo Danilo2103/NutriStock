@@ -1,0 +1,54 @@
+<!-- Define o título da página -->
+{% block title %}
+<title>NutriStock</title>
+{% endblock %}
+
+<!-- Define o corpo da página -->
+{% block body %} 
+<head>
+    <style>
+        body {
+            background-image: url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png');
+            background-color: #f5f5dc;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<!-- Define a seção principal da página -->
+<main class="bg-teal-400 w-4/5 mx-auto my-20 py-20">
+    <!-- Título da página -->
+    <h1 class="text-white text-4xl text-center">NUTRISTOCK</h1>
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 50px;">
+        <div class="item" style="width: 150px; margin: 20px; text-align: center;">
+            <a href="{{ url_for('estoque_add') }}">
+                <img alt="Icon of a box with the text 'ADD ITEM' below it" height="100"
+                    src="/static/images/assets/plus.png" width="100" style="width: 100px; height: 100px; border: 2px solid black; padding: 10px;" />
+            </a>
+            <p style="font-size: 18px; margin-top: 10px;">ADD ITEM</p>
+        </div>
+        <div class="item" style="width: 150px; margin: 20px; text-align: center;">
+            <a href="{{ url_for('estoque_show') }}">
+                <img alt="Icon of a box with the text 'SHOW ITEMS' below it" height="100"
+                    src="/static/images/assets/box.png" width="100" style="width: 100px; height: 100px; border: 2px solid black; padding: 10px;" />
+            </a>
+            <p style="font-size: 18px; margin-top: 10px;">SHOW ITEMS</p>
+        </div>
+        <div class="item" style="width: 150px; margin: 20px; text-align: center;">
+            <a href="{{ url_for('imc') }}">
+                <img alt="Icon of a dumbbell with the text 'IMC CALCULATOR' below it" height="100"
+                    src="/static/images/assets/dumbell.png" width="100" style="width: 100px; height: 100px; border: 2px solid black; padding: 10px;" />
+            </a>
+            <p style="font-size: 18px; margin-top: 10px;">IMC CALCULATOR</p>
+        </div>
+        <div class="item" style="width: 150px; margin: 20px; text-align: center;">
+            <a href="#settings">
+                <img alt="Icon of gears with the text 'SETTINGS' below it" height="100"
+                    src="/static/images/assets/settings.png" width="100" style="width: 100px; height: 100px; border: 2px solid black; padding: 10px;" />
+            </a>
+            <p style="font-size: 18px; margin-top: 10px;">SETTINGS</p>
+        </div>
+    </div>
+</main>
+{% endblock %}
